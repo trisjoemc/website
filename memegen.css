@@ -1,0 +1,96 @@
+/** @format */
+
+h1 {
+	display: inline-block;
+	margin: 1%;
+	width: 500px;
+	height: auto;
+	text-align: center;
+	position: relative;
+	opacity: 1;
+	font-family: cursive;
+	color: purple;
+	margin-left: 300px;
+}
+
+h2 {
+	max-height: 50%;
+	position: absolute;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+	color: bisque;
+	z-index: 9;
+	left: 20px;
+}
+
+h3 {
+	max-height: 50%;
+	position: absolute;
+	bottom: -65px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+	color: bisque;
+	z-index: 9;
+	left: 20px;
+	grid-column: 1;
+	grid-row: 3;
+}
+
+h4 {
+	text-align: left;
+	font: bolder;
+	font-family: fantasy;
+	font-style: oblique;
+}
+
+label {
+	font-family: fantasy;
+	font: bold;
+	font-style: oblique;
+}
+img {
+	display: inline-block;
+	margin: 1%;
+	max-width: 200px;
+	height: auto;
+	text-align: center;
+	position: relative;
+	opacity: 1;
+}
+
+.textTop {
+	padding-top: 5px;
+}
+
+.textBottom {
+	padding-top: 5px;
+}
+button {
+	background-color: #cbc3e3;
+	cursor: pointer;
+	color: black;
+	border: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 8px;
+	font-family: cursive;
+}
+
+button:hover {
+	background-color: #ebe8fc;
+}
+button:active {
+	opacity: 0.6;
+}
+
+body {
+	background-color: rgba(241, 241, 241, 0.856);
+}
