@@ -14,7 +14,6 @@ h1 {
 }
 
 h2 {
-	max-height: 50%;
 	position: absolute;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
@@ -23,13 +22,12 @@ h2 {
 	hyphens: auto;
 	color: bisque;
 	z-index: 9;
-	left: 20px;
+	transform: translate(10px, 10px);
+	margin-top: 0px;
 }
 
 h3 {
-	max-height: 50%;
 	position: absolute;
-	bottom: -65px;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 	overflow-wrap: break-word;
@@ -37,9 +35,13 @@ h3 {
 	hyphens: auto;
 	color: bisque;
 	z-index: 9;
-	left: 20px;
-	grid-column: 1;
-	grid-row: 3;
+	transform: translate(10px, 10px);
+	margin-top: 400px;
+}
+
+form {
+	text-align: center;
+	margin: 20px;
 }
 
 h4 {
@@ -57,7 +59,6 @@ label {
 img {
 	display: inline-block;
 	margin: 1%;
-	max-width: 200px;
 	height: auto;
 	text-align: center;
 	position: relative;
@@ -93,4 +94,17 @@ button:active {
 
 body {
 	background-color: rgba(241, 241, 241, 0.856);
+}
+
+.meme-div img {
+	height: 450px;
+
+}
+
+.meme-div {
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px;
 }
