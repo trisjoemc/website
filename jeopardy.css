@@ -1,0 +1,51 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+body {
+  background-color: blanchedalmond;
+}
+#table th, #table td {
+  border: solid 1px white;
+  width: 12em;
+  padding: 1em;
+}
+
+#table {
+  text-align: center;
+  font-size: 9pt;
+  background-color: #060ce9;
+  color: white;
+  border-collapse: collapse;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+td {
+  height: 9em;
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+th {
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 4em;
+  display: table-cell;
+  vertical-align: inherit;
+  text-align: -internal-center;
+}
