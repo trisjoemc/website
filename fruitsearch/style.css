@@ -1,0 +1,71 @@
+/** @format */
+
+* {
+	box-sizing: border-box;
+}
+
+/*:focus {
+
+}
+*/
+
+body {
+	background-image: linear-gradient(
+		to left,
+		rgb(255, 94, 0),
+		rgb(249, 200, 23)
+	);
+}
+
+input {
+	background-color: rgb(241, 167, 71);
+	justify-content: center;
+	display: flex;
+	position: absolute;
+	padding: 10px 10px 10px 10px;
+	width: 200px;
+	margin: 0;
+	top: 35%;
+	right: 42%;
+	border-color: rgb(255, 94, 0);
+}
+
+.search-container {
+	width: 300px;
+	top: 25px;
+	padding: 10px;
+}
+
+.search-container .suggestions {
+	width: 298px;
+	top: 40%;
+	right: 35.4%;
+	position: fixed;
+}
+
+/*
+.suggestions {
+  
+}
+*/
+ul {
+	margin: 0;
+	padding: 0;
+	width: 203.4px;
+	list-style: none;
+}
+
+li {
+	background-color: transparent;
+	list-style: none;
+	padding: 10px;
+}
+
+ul li {
+	background-color: rgb(241, 167, 71);
+	list-style: none;
+}
+
+ul li:hover {
+	background-color: rgb(255, 94, 0);
+}
