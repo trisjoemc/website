@@ -3,9 +3,7 @@
 // global to hold the User instance of the currently-logged-in user
 let currentUser;
 
-/******************************************************************************
- * User login/signup/login
- */
+//User login/signup/login
 
 /** Handle login form submission. If login ok, sets up the user instance */
 
@@ -21,7 +19,6 @@ async function login(evt) {
   const password = $("#login-password").val();
 
   // User.login retrieves user info from API and returns User instance
-  // which we'll make the globally-available, logged-in user.
   currentUser = await User.login(username, password);
 
   $loginForm.trigger("reset");
@@ -43,7 +40,6 @@ async function signup(evt) {
   const password = $("#signup-password").val();
   
   // User.signup retrieves user info from API and returns User instance
-  // which we'll make the globally-available, logged-in user.
   currentUser = await User.signup(username, password, name);
   
   $signupForm.trigger("reset");
@@ -54,10 +50,7 @@ async function signup(evt) {
 
 $signupForm.on("submit", signup);
 
-/** Handle click of logout button
- *
- * Remove their credentials from localStorage and refresh page
- */
+//Remove their credentials from localStorage and refresh page
 
 function logout(evt) {
   console.debug("logout", evt);
@@ -67,12 +60,8 @@ function logout(evt) {
 
 $navLogOut.on("click", logout);
 
-/******************************************************************************
- * Storing/recalling previously-logged-in-user with localStorage
- */
-
 /** If there are user credentials in local storage, use those to log in
- * that user. This is meant to be called on page load, just once.
+ * that user. 
  */
 
 async function checkForRememberedUser() {
@@ -85,12 +74,6 @@ async function checkForRememberedUser() {
   currentUser = await User.loginViaStoredCredentials(token, username);
 }
 
-/** Sync current user information to localStorage.
- *
- * We store the username/token in localStorage so when the page is refreshed
- * (or the user revisits the site later), they will still be logged in.
- */
-
 function saveUserCredentialsInLocalStorage() {
   console.debug("saveUserCredentialsInLocalStorage");
   if (currentUser) {
@@ -99,17 +82,8 @@ function saveUserCredentialsInLocalStorage() {
   }
 }
 
-/******************************************************************************
- * General UI stuff about users
- */
-
-/** When a user signs up or registers, we want to set up the UI for them:
- *
- * - show the stories list
- * - update nav bar options for logged-in user
- * - generate the user profile part of the page
- */
-
+ // General UI stuff about users
+ 
 async function updateUIOnUserLogin() {
   console.debug("updateUIOnUserLogin");
   hidePageComponents();

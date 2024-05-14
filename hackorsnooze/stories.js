@@ -11,13 +11,7 @@ async function getAndShowStoriesOnStart() {
 
   putStoriesOnPage();
 }
-
-/**
- * A render method to render HTML for an individual Story instance
- * - story: an instance of Story
- *
- * Returns the markup for the story.
- */
+//Returns the markup for the story.
 
 function generateStoryMarkup(story) {
   // console.debug("generateStoryMarkup", story);

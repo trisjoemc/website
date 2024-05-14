@@ -22,7 +22,7 @@ const COLORS = [
 
 // here is a helper function to shuffle an array
 // it returns the same array with values shuffled
-// it is based on an algorithm called Fisher Yates if you want ot research more
+// it is based on an algorithm called Fisher Yates
 function shuffle(array) {
 	let counter = array.length;
 

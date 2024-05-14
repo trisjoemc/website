@@ -8,9 +8,7 @@ const BASE_URL = "https://hack-or-snooze-v3.herokuapp.com";
 
 class Story {
 
-  /** Make instance of Story from data object about story:
-   *   - {title, author, url, username, storyId, createdAt}
-   */
+  // Make instance of Story from data object about story:
 
   constructor({ storyId, title, author, url, username, createdAt }) {
     this.storyId = storyId;
@@ -39,20 +37,9 @@ class StoryList {
     this.stories = stories;
   }
 
-  /** Generate a new StoryList. It:
-   *
-   *  - calls the API
-   *  - builds an array of Story instances
-   *  - makes a single StoryList instance out of that
-   *  - returns the StoryList instance.
-   */
+  // Generate a new StoryList. 
 
   static async getStories() {
-    // Note presence of `static` keyword: this indicates that getStories is
-    //  **not** an instance method. Rather, it is a method that is called on the
-    //  class directly. Why doesn't it make sense for getStories to be an
-    //  instance method?
-
     // query the /stories endpoint (no auth required)
     const response = await axios({
       url: `${BASE_URL}/stories`,
@@ -65,13 +52,6 @@ class StoryList {
     // build an instance of our own class using the new array of stories
     return new StoryList(stories);
   }
-
-  /** Adds story data to API, makes a Story instance, adds it to story list.
-   * - user - the current instance of User who will post the story
-   * - obj of {title, author, url}
-   *
-   * Returns the new Story instance
-   */
 
   async addStory(user, newStory) {
     let response = await axios ({
@@ -99,11 +79,8 @@ class StoryList {
  */
 
 class User {
-  /** Make user instance from obj of user data and a token:
-   *   - {username, name, createdAt, favorites[], ownStories[]}
-   *   - token
-   */
-
+  //Make user instance from obj of user data and a token:
+   
   constructor({
                 username,
                 name,
@@ -124,12 +101,7 @@ class User {
     this.loginToken = token;
   }
 
-  /** Register new user in API, make User instance & return it.
-   *
-   * - username: a new username
-   * - password: a new password
-   * - name: the user's full name
-   */
+  // Register new user in API, make User instance & return it.
 
   static async signup(username, password, name) {
     const response = await axios({
@@ -152,11 +124,7 @@ class User {
     );
   }
 
-  /** Login in user with API, make User instance & return it.
-
-   * - username: an existing user's username
-   * - password: an existing user's password
-   */
+  // Login in user with API, make User instance & return it.
 
   static async login(username, password) {
     const response = await axios({
@@ -178,10 +146,6 @@ class User {
       response.data.token
     );
   }
-
-  /** When we already have credentials (token & username) for a user,
-   *   we can log them in automatically. This function does that.
-   */
 
   static async loginViaStoredCredentials(token, username) {
     try {
